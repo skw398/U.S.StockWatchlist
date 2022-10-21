@@ -1,0 +1,28 @@
+C:\Users\csharp\Desktop\Test\Test\bin\Debug\Test.exe.config
+C:\Users\csharp\Desktop\Test\Test\bin\Debug\Test.exe
+C:\Users\csharp\Desktop\Test\Test\bin\Debug\Test.pdb
+C:\Users\csharp\Desktop\Test\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+C:\Users\csharp\Desktop\Test\Test\obj\Debug\Test.csproj.SuggestedBindingRedirects.cache
+C:\Users\csharp\Desktop\Test\Test\obj\Debug\Test.Form1.resources
+C:\Users\csharp\Desktop\Test\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\csharp\Desktop\Test\Test\obj\Debug\Test.csproj.GenerateResource.cache
+C:\Users\csharp\Desktop\Test\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\csharp\Desktop\Test\Test\obj\Debug\Test.exe
+C:\Users\csharp\Desktop\Test\Test\obj\Debug\Test.pdb
+C:\Users\csharp\Desktop\Test\Test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\csharp\Desktop\Test\Test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\csharp\Desktop\Test\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\csharp\Desktop\Test - コピー\Test\bin\Debug\Test.exe.config
+C:\Users\csharp\Desktop\Test - コピー\Test\bin\Debug\Test.exe
+C:\Users\csharp\Desktop\Test - コピー\Test\bin\Debug\Test.pdb
+C:\Users\csharp\Desktop\Test - コピー\Test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\csharp\Desktop\Test - コピー\Test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\csharp\Desktop\Test - コピー\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+C:\Users\csharp\Desktop\Test - コピー\Test\obj\Debug\Test.csproj.SuggestedBindingRedirects.cache
+C:\Users\csharp\Desktop\Test - コピー\Test\obj\Debug\Test.Form1.resources
+C:\Users\csharp\Desktop\Test - コピー\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\csharp\Desktop\Test - コピー\Test\obj\Debug\Test.csproj.GenerateResource.cache
+C:\Users\csharp\Desktop\Test - コピー\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\csharp\Desktop\Test - コピー\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\csharp\Desktop\Test - コピー\Test\obj\Debug\Test.exe
+C:\Users\csharp\Desktop\Test - コピー\Test\obj\Debug\Test.pdb
