@@ -6,7 +6,7 @@ Data provided by [Financial Modeling Prep](https://site.financialmodelingprep.co
 
 ```C#
 //APIClient
-private readonly string apiKey = ; // Assign your API key.
+private const string API_KEY = ; // Assign your key.
 ```
 ## Refs
 - [C# での非同期プログラミング | Microsoft Learn](https://learn.microsoft.com/ja-jp/dotnet/csharp/programming-guide/concepts/async/)
