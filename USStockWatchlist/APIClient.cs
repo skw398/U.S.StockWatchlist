@@ -12,7 +12,7 @@ namespace USStockWatchlist {
     sealed class APIClient {
         public static APIClient shared = new APIClient();
         private readonly HttpClient httpClient;
-        private readonly string apiKey = ""; // Assign your key.
+        private const string API_KEY = ; // Assign your key.
 
         private APIClient() { httpClient = new HttpClient(); }
 
@@ -20,7 +20,7 @@ namespace USStockWatchlist {
 
         public async Task<(List<Stock> stocks, List<string> failureSymbols)> FetchData(List<string> symbols) {
             string query = String.Join(",", symbols);
-            string url = $"https://financialmodelingprep.com/api/v3/profile/{query.ToUpper()}?apikey={apiKey}";
+            string url = $"https://financialmodelingprep.com/api/v3/profile/{query.ToUpper()}?apikey={API_KEY}";
             JArray jsonStocks = JArray.Parse(await httpClient.GetStringAsync(url));
 
             Dictionary<string, StockDTO> stockDTOs = new Dictionary<string, StockDTO>();
