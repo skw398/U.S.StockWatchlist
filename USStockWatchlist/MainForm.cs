@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -11,7 +11,7 @@ namespace USStockWatchlist {
     sealed public partial class MainForm : Form {
         private StockDataSource stockDataSource;
         private SortType selectedSortType = SortType.custom;
-        private readonly string path = @"..\..\SymbolsTextBox.txt";
+        private const string PATH = @"..\..\SymbolsTextBox.txt";
 
         private bool IsLoading {
             set {
@@ -25,17 +25,15 @@ namespace USStockWatchlist {
         public MainForm() {
             InitializeComponent();
 
-            using (StreamReader sr = new StreamReader(path)) {
+            using (StreamReader sr = new StreamReader(PATH)) {
                 symbolsTextBox.Text = sr.ReadToEnd();
             }
 
-            APIClient.shared.didFetchOneLogo = symbol => {
-                // UIスレッドで実行
-                Invoke((Action)(() => {
-                    progressBar.Value++;
-                    statusLabel.Text = symbol + " is Loaded";
-                }));
-            };
+            // UIスレッドで実行
+            APIClient.shared.didFetchOneLogo = symbol => Invoke((Action)(() => { 
+                progressBar.Value++;
+                statusLabel.Text = symbol + " is Loaded";
+            }));
         }
 
         private async void LoadButtonDidClick(object sender, EventArgs e) {
@@ -43,7 +41,7 @@ namespace USStockWatchlist {
 
             await Fetch();
 
-            using (StreamWriter writer = new StreamWriter(path, false)) {
+            using (StreamWriter writer = new StreamWriter(PATH, false)) {
                 writer.WriteLine(symbolsTextBox.Text);
             }
         }
@@ -98,13 +96,13 @@ namespace USStockWatchlist {
                 List<string> symbols = CreateSymbolsListFromTextFieldText();
                 List<string> duplicatedSymbols = FindDuplicatedSymbols(symbols);
 
+                ConfigureProgressBar(symbols);
+
                 if (duplicatedSymbols.Count > 0) {
                     ShowAlertWithEnumeratingSymbols(duplicatedSymbols,
                                                     title: "Remove duplicated symbols and start loading.");
                     symbols = symbols.Distinct().ToList();
                 }
-
-                ConfigureProgressBar(symbols);
 
                 var (stocks, failureSymbols) = await APIClient.shared.FetchData(symbols);
 
