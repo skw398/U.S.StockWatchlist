@@ -1,4 +1,4 @@
-# USStockWatchlist
+# U.S.StockWatchlist
 
 Data provided by [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/)
 
