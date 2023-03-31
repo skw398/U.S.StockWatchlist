@@ -31,7 +31,6 @@ namespace USStockWatchlist {
             }
 
             Dictionary<string, Bitmap> logos = await FetchLogos(symbols);
-            //Dictionary<string, Bitmap> logos = await FetchLogosSync(symbols);
             List<Stock> stocks = new List<Stock>();
             List<string> failureSymbols = new List<string>();
 
@@ -69,31 +68,6 @@ namespace USStockWatchlist {
             Dictionary<string, Bitmap> logos = new Dictionary<string, Bitmap>();
             Enumerable.Range(0, symbols.Count).ToList()
                 .ForEach(i => logos[symbols[i]] = result[i]);
-
-            return logos;
-        }
-
-        // 同期的にロゴを取得する関数（並列処理とパフォーマンス比較のため）
-        private async Task<Dictionary<string, Bitmap>> FetchLogosSync(List<string> symbols) {
-            List<Bitmap> bitmaps = new List<Bitmap>();
-
-            foreach (var symbol in symbols) {
-                string url = $"https://financialmodelingprep.com/image-stock/{symbol.ToUpper()}.png";
-
-                try {
-                    var stream = await new WebClient().OpenReadTaskAsync(new Uri(url));
-                    didFetchOneLogo(symbol);
-                    bitmaps.Add(new Bitmap(stream));
-                }
-                catch (Exception ex) {
-                    Console.WriteLine(symbol + " error: " + ex.ToString());
-                    bitmaps.Add(null);
-                }
-            }
-
-            Dictionary<string, Bitmap> logos = new Dictionary<string, Bitmap>();
-            Enumerable.Range(0, symbols.Count).ToList()
-                .ForEach(i => logos[symbols[i]] = bitmaps[i]);
 
             return logos;
         }

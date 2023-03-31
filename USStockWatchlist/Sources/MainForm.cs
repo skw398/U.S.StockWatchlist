@@ -29,7 +29,6 @@ namespace USStockWatchlist {
                 symbolsTextBox.Text = sr.ReadToEnd();
             }
 
-            // UIスレッドで実行
             APIClient.shared.didFetchOneLogo = symbol => Invoke((Action)(() => { 
                 progressBar.Value++;
                 statusLabel.Text = symbol + " is Loaded";
