@@ -2,6 +2,10 @@
 
 Data provided by [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/)
 
+## Screenshot
+
+<img width="752" alt="スクリーンショット 2023-10-20 15 40 23" src="https://github.com/skw398/U.S.StockWatchlist/assets/114917347/ccfd03e6-e58e-4345-bb7c-f861cfc6af04">
+
 ## To Run
 
 ```C#
